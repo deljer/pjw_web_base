@@ -14,14 +14,45 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-
+	<resources mapping="/js/**" location="/resources/js/" />
+	<resources mapping="/css/**" location="/resources/css/" />
+	
+	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="prefix" value="/WEB-INF/jsp/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
 	<context:component-scan base-package="com.pjw.web_base" />
+	
+	<!-- interceptor -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+			<beans:bean id="loggerInterceptor" class ="com.pjw.web_base.common.interceptor.LoggerInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors>
+	
+	<!-- filter -->
+	<filter> 
+    <filter-name>encodingFilter</filter-name> 
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> 
+    <init-param> 
+       <param-name>encoding</param-name> 
+       <param-value>UTF-8</param-value> 
+    </init-param> 
+    <init-param> 
+       <param-name>forceEncoding</param-name> 
+       <param-value>true</param-value> 
+    </init-param> 
+ 	</filter> 
+	 <filter-mapping> 
+    	<filter-name>encodingFilter</filter-name> 
+    	<url-pattern>/*</url-pattern> 
+	 </filter-mapping> 
+
+	
 	
 	
 	
