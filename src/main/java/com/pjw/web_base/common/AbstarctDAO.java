@@ -1,4 +1,4 @@
-package com.pjw.web_base.common.dao;
+package com.pjw.web_base.common;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;;
 
-public class AbstractDao {
+public class AbstarctDAO {
 	protected Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
