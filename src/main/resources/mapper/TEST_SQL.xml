@@ -13,6 +13,21 @@
 					]]>
 	</select>
 
+	<insert id="insertTest" parameterType="hashmap" >
+		INSERT  INTO MENU_MASTER(
+		MENU_ID
+		)values(
+		'11'
+		)
+		
+	</insert>
+	<insert id="insertTest2" parameterType="hashmap" >
+		INSERT  INTO MENU_MASTER(
+		MENU_ID
+		)values(
+		'11'
+		)
+	</insert>
 
 </mapper>
 

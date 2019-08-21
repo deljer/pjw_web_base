@@ -27,7 +27,7 @@ public class TestController {
 	@RequestMapping(value="/openSampleBoardList.do") 
 	public ModelAndView openSampleBoardList(Map<String,Object> commandMap) throws Exception{
 		ModelAndView mv = new ModelAndView("/home"); 
-		List<Map<String,Object>> list = testService.test(commandMap); 
+		List<Map<String,Object>> list = testService.inserttest(commandMap); 
 		mv.addObject("list", list); 
 		return mv; 
 	}

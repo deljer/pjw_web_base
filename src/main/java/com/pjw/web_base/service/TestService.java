@@ -5,6 +5,6 @@ import java.util.Map;
 
 public interface TestService {
 
-	List<Map<String, Object>> test(Map<String, Object> commandMap) throws Exception;
+	List<Map<String, Object>> inserttest(Map<String, Object> commandMap) throws Exception;
 
 }
