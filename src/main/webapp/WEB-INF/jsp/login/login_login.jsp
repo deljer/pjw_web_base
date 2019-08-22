@@ -33,12 +33,6 @@
 			</p> <c:remove var="SPRING_SECURITY_LAST_EXCEPTION" scope="session" />
 			</font>
 		</c:if>
-	<sec:authorize access="isAuthenticated()">
-	    <form action="/logout" method="POST">
-	        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-	        <button type="submit">LOGOUT</button>
-	    </form>
-	</sec:authorize>
 
 
 

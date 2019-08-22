@@ -33,7 +33,6 @@ public class CustomMapArgumentResolver implements HandlerMethodArgumentResolver 
 			if (values != null) {
 				commandMap.put(key, (values.length > 1) ? values : values[0]);
 			}
-					
 		}
 		return commandMap;
 	}

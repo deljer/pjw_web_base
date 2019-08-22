@@ -12,14 +12,17 @@ import com.pjw.web_base.common.util.CommandMap;
 public class SecurityController {
 	private Logger logger = LogManager.getLogger(SecurityController.class);
 //	@Autowired
-	@RequestMapping(value="/common/login/loginView.do")
+	@RequestMapping(value="/login/loginView.do")
 	public ModelAndView loginView(CommandMap commandMap) throws Exception{
-		return  new ModelAndView("/common/login/login_login");
+		return  new ModelAndView("/login/login_login");
 	}
-	@RequestMapping(value="/common/login/accessDeniedView.do")
+	@RequestMapping(value="/login/accessDeniedView.do")
 	public ModelAndView accessDeniedView(CommandMap commandMap) throws Exception{
-		return  new ModelAndView("/common/login/accessDenied");
+		return  new ModelAndView("/login/accessDenied");
 	}
-	
+	@RequestMapping(value="/main/mainView.do")
+	public ModelAndView mainView(CommandMap commandMap) throws Exception{
+		return  new ModelAndView("/main/main");
+	}
 	
 }

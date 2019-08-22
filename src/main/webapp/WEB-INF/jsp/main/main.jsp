@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>main화면입니다.</title>
+</head>
 <body>
-<%response.sendRedirect("/main/mainView.do"); %>
+안뇽
 </body>
 </html>
