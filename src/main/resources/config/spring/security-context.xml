@@ -40,18 +40,11 @@
 		<intercept-url pattern="/login/**" 	access="permitAll" />
 		<intercept-url pattern="/**"    	access="hasAnyRole('ROLE_GUEST')" />
 	</http>
-	<jdbc-user-service data-source-ref="dataSource"	id="userService"
-		users-by-username-query="SELECT USER_ID as user_id ,USER_PWD as user_pwd, USER_ENABLED FROM USER_MASTER WHERE USER_ID=?"
-		authorities-by-username-query="SELECT USER_ID as USER_ID, USER_AUTHORITY FROM USER_MASTER WHERE USER_ID=?"/>
 	<authentication-manager>
 		<authentication-provider user-service-ref="userService">
 		</authentication-provider>
 	</authentication-manager>
-
-
-
-
-
+	<beans:bean id="userService" class="com.pjw.web_base.common.login.CustomUserDetailsService"/>
 
 
 

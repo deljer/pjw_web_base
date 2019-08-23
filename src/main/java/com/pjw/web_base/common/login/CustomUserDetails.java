@@ -23,7 +23,7 @@ public class CustomUserDetails implements UserDetails{
 	private String user_name;
 	private String user_pwd;
 	private String user_authority;
-	private String user_enable;
+	private String USER_ENABLED;
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -34,38 +34,41 @@ public class CustomUserDetails implements UserDetails{
 
 	@Override
 	public String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
+		return user_pwd;
 	}
 
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return null;
+		return user_name;
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return false;
+		if(USER_ENABLED.equals("1")) {
+			return true;	
+		}else {
+			return false;
+		}
+		
 	}
 
 }
