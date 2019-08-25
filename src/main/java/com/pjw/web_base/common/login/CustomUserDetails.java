@@ -32,6 +32,12 @@ public class CustomUserDetails implements UserDetails{
 	        return auth;
 	}
 
+	
+	
+	public String getUser_id() {
+		return user_id;
+	}
+
 	@Override
 	public String getPassword() {
 		return user_pwd;
@@ -39,25 +45,24 @@ public class CustomUserDetails implements UserDetails{
 
 	@Override
 	public String getUsername() {
-		// TODO Auto-generated method stub
 		return user_name;
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
+		
 		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
+		
 		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
+		
 		return true;
 	}
 

@@ -10,8 +10,9 @@ import com.pjw.web_base.common.util.CommandMap;
 
 @Controller
 public class SecurityController {
+	
 	private Logger logger = LogManager.getLogger(SecurityController.class);
-//	@Autowired
+
 	@RequestMapping(value="/login/loginView.do")
 	public ModelAndView loginView(CommandMap commandMap) throws Exception{
 		return  new ModelAndView("/login/login_login");
